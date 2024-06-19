@@ -1,0 +1,10 @@
+Queue
+    - example
+        - Printer list of items to print
+        - call centre calls
+        - Point of sale in a restaurant (preparing and delivering order)
+    - implementation
+        - Array
+            - Linear Queue
+            - Circular Queue
+        - Linklist

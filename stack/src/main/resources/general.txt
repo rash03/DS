@@ -1,0 +1,21 @@
+stack example : Browser's back button.
+
+Create Stack
+    - Array
+        - need to declare size : Fixed Size
+        - easy impl
+        - Space Complexity : O(N)
+    - linkList
+        - No need to declare size : variable Size
+        - Need to do more operations using linklist  : cOmplex impl
+        - Add an element in stack means adding a element at the beginning of link list.
+        - POP means remove element from beginning of link list
+        - pEek means reading the head element
+        - isempty => head==null
+        - delete => head = null
+
+    - advantage
+          - LIFO functionality
+          - chance of data corruption is less
+    - disadvantage
+          - random access is not possible.

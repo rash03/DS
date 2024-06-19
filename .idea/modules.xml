@@ -3,24 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DS.iml" filepath="$PROJECT_DIR$/DS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/array.iml" filepath="$PROJECT_DIR$/array.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/array.main.iml" filepath="$PROJECT_DIR$/.idea/modules/array.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/array.test.iml" filepath="$PROJECT_DIR$/.idea/modules/array.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/arraylist.iml" filepath="$PROJECT_DIR$/arraylist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arraylist.main.iml" filepath="$PROJECT_DIR$/.idea/modules/arraylist.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/arraylist.test.iml" filepath="$PROJECT_DIR$/.idea/modules/arraylist.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/circularDoublyLinkList.iml" filepath="$PROJECT_DIR$/circularDoublyLinkList.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/circularDoublyLinkList.main.iml" filepath="$PROJECT_DIR$/.idea/modules/circularDoublyLinkList.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/circularDoublyLinkList.test.iml" filepath="$PROJECT_DIR$/.idea/modules/circularDoublyLinkList.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/circularSinglyLinkList.iml" filepath="$PROJECT_DIR$/circularSinglyLinkList.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/circularSinglyLinkList.main.iml" filepath="$PROJECT_DIR$/.idea/modules/circularSinglyLinkList.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/circularSinglyLinkList.test.iml" filepath="$PROJECT_DIR$/.idea/modules/circularSinglyLinkList.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/doublyLinkList.iml" filepath="$PROJECT_DIR$/doublyLinkList.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doublyLinkList.main.iml" filepath="$PROJECT_DIR$/.idea/modules/doublyLinkList.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doublyLinkList.test.iml" filepath="$PROJECT_DIR$/.idea/modules/doublyLinkList.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linklist.iml" filepath="$PROJECT_DIR$/linklist.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linklist.main.iml" filepath="$PROJECT_DIR$/.idea/modules/linklist.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/linklist.test.iml" filepath="$PROJECT_DIR$/.idea/modules/linklist.test.iml" />
     </modules>
   </component>
 </project>
