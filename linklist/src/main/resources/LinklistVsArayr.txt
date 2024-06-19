@@ -1,0 +1,28 @@
+1.Elements of LinkList are independent Objects,
+Array consists of contiguous memory location,
+ so the elements of array are not independent object
+
+2. Array are of fixed length whereas Linked list are of variable length
+
+3. Random access in case of Array is efficient as compared to link list
+IN case of link list we have to iterate from head to the desired location to get
+the value
+
+Type of Link List
+ø Singly LinkList
+ø Circular Singly LinkList
+ø Doubly LinkList
+ø Circular Doubly LinkList
+
+Circular => Lastnode contains the location of first Node ( which is not the
+head node). head node contains location of firstNode. Tail node contains
+location of last node.
+Ewxample=> game of cards => with 4 player the chance of playing loops from
+player 1 then 2 then3 then 4 and again 1
+It is possible to go
+from 1st to last and last to 1st
+In Singly Linklist last node contains null as next location pointer
+
+Doubly => a node contains reference of previous and next node
+Example = > Music Playlist => next song or previous song =>
+Each node contains its previous and next => we can iterate back and forward from any node

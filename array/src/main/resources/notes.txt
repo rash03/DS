@@ -1,0 +1,29 @@
+1DArray
+            T           S
+Create      O(1)        O(n)
+Insert      O(1)        O(1)
+Traverse    O(n)        O(1)
+Access      O(1)        O(1)
+Search      O(n)        O(1)
+Delete      O(1)        O(1)
+
+
+2DArray
+
+Create      O(1)        O(mn)
+Insert      O(1)        O(1)
+Traverse    O(mn)        O(1)
+Access      O(1)        O(1)
+Search      O(mn)        O(1)
+Delete      O(1)        O(1)
+
+
+When to use Array
+1. to store multiple variables of same type
+2. Random access
+
+When to avoid
+
+1. same data type elements
+2. reserves memory => so when that space is full then we end up
+creating a new array with more space, copy old elements in new one.

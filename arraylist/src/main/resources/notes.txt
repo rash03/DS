@@ -1,0 +1,44 @@
+ArrayList
+
+1. default size is 10 elements
+2. arr.add() method adds to the end of the array.
+3. arr.add(1,"C") adds the element "C" at index 1.
+NOTE: if a element is inserted at a location which is > size of arraylist then index out of bound exception is thrown
+                   ___arr.add() -> O(1)
+Time complexity -|
+                   ---arr.add(1,"C") -> O(n)
+
+Space Complexity -> Amortized O(1) : time to resize an array will also be fixed.
+
+Access Arraylist
+
+arr.get(index)
+Time Complexity O(1)
+Space Complexity O(1)
+
+Traversal
+Time Complexity O(n)
+Space Complexity O(1)
+
+Searching
+Time Complexity for searching an element is O(n)
+Time complexity for accessing using index is O(1)
+Space Complexity O(1)
+
+Deleting
+
+arr.remove(index)
+element is removed at that index, then all other elements to the right are shifted to left.
+Thus the last element of the arraylist gets empty.
+Time Complexity - O(N)
+Space Complexity O(1)
+
+Operation                               Time Complexity         Space Complexity
+
+Create                                      O(1)                    O(1)  - O(N)
+Inserting a value add(element)              O(1)                    O(n)  - O(1)
+Inserting a value add(index,element)        O(N)                    O(N)  - O(1)
+Traversing                                  O(N)                    O(1)
+Accessing                                   O(1)                    O(1)
+Searching                                   O(N)                    O(1)
+Deleting                                    O(N)                    O(1)

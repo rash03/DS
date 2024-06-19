@@ -1,0 +1,10 @@
+O(N+P) where P = N/2
+=> O(N) + O(P) => since bigger complexity is O(N)= > Ans = O(N)
+
+O(2N) => Ans = O(N)
+
+O(N+LogN) => O(N) + O(logN) => Since O(logN)< O(N) => Ans = O(N)
+
+O(N+NLogN) => O(N) + O(NlogN) => Since O(NLogN) > O(N) => Ans = O(NLogN)
+
+O(N+M) = > O(N) + O(M)
