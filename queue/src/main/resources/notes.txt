@@ -1,4 +1,4 @@
-SLL                     Time Complexity     Space Complexity
+LQ                     Time Complexity     Space Complexity
 
 Create Queue                    O(1)                O(N)
 enqueue                         O(1)                O(1)
@@ -6,4 +6,13 @@ dequeue                         O(1)                O(1)
 peek                            O(1)                O(1)
 isEmpty                         O(1)                O(1)
 isFull                          O(1)                O(1)
-Delete Queue
+Delete Queue                    O(1)                O(1)
+
+CQ
+Create Queue                    O(1)                O(N)
+enqueue                         O(1)                O(1)
+dequeue                         O(1)                O(1)
+peek                            O(1)                O(1)
+isEmpty                         O(1)                O(1)
+isFull                          O(1)                O(1)
+Delete Queue                    O(1)                O(1)

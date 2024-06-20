@@ -52,18 +52,34 @@ public class CircularQueue {
     }
 
     public int dequeue(){
-
         if(isEmpty()){
             System.out.println("Queue is Empty");
             return -1;
         }else {
             int element = arr[front];
             arr[front] = -1;
-            front++;
-            if(front == size){
+            if(front == rear){
+                front = rear = -1;
+            }else if(front +1 == size){
                 front = 0;
+            }else{
+                front++;
             }
             return element;
         }
+    }
+
+    public int peek(){
+        if (isEmpty()){
+            System.out.println("Circular queue is empty");
+            return  -1;
+        }else{
+            return arr[front];
+        }
+    }
+
+    public void delete(){
+        arr = null;
+        System.out.println("Queue is deleted");
     }
 }
