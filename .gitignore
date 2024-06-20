@@ -1,1 +1,8 @@
 .DS_Store
+DS.iml
+### IntelliJ IDEA ###
+stack/.gradle
+stack/build
+
+queue/.gradle
+queue/build
