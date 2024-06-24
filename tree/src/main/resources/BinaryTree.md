@@ -90,3 +90,17 @@
       - delete the deepest node
     - Delete Tree
       - Root=null;
+      
+**Complexity**
+
+|                 |ARRAY  |  ARRAY | LINKLIST |LINKLIST   |
+|---| ---               |---                |---                |---                |      
+|                 |Time Complexity   |Space Complexity   |Time Complexity   |Space Complexity   |
+|---| ---               |---                |---                |---                |
+ Create BT       |     O(1)         |     O(N)          |     O(1)         |      O(1)         |
+ Insert Node     |     O(1)         |      O(1)         |      O(N)        |       O(N)        |
+ Delete Node     |     O(N)         |      O(1)         |      O(N)        |       O(N)        |
+ Search Node     |     O(N)         |      O(1)         |      O(N)        |       O(N)        |
+ Traverse BT     |     O(N)         |      O(1)/O(N)    |      O(N)        |       O(N)        |
+ Delete BT       |     O(N)         |      O(1)         |      O(1)        |       O(1)        |
+ Space Efficient |              |        X          |              |        √          |

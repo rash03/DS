@@ -35,3 +35,14 @@
           - Find the smallest Node in the Right sub tree
         - Replace the smallest Node with the target node
         - The child of the smallest node is now child of the parent of the smallest Node
+
+**Complexity**
+
+|                 | Time Complexity | Space Complexity |
+|-----------------|-----------------|------------------|
+ Create BST       | O(1)            | O(1)             |
+ Insert Node   BST  | O(LogN)         | O(LogN)          |
+ Traverse BST    | O(N)            | O(N)             |
+ Search Node  BST    | O(logN)         | O(logN)          |
+  Delet Node BST  | O(LogN)         | O(logN)          | 
+ Delete BT       | O(1)            | O(1)             |
