@@ -1,0 +1,33 @@
+Tree
+    - 2 Components
+        - Data
+        - Link to sub category©
+        - base Category and Sub Category under it
+     - Store Hierarchical Data, like Folder structure, organisation Structure etc
+     - Tree Data Structure
+        - Binary Tree
+        - Binary Search
+            - performs fast search, insert on sorted data
+            - type of Binary Tree
+        - AVL Tree
+            - type of Binary Tree
+        - Red Black Tree
+            - type of Binary Tree
+        - Trie
+        - B Tree
+        - B+ Tree
+        - Splay Tree
+        - Segment Tree
+        - Fenwick Tree (Binary Index Tree)
+        - Quad Tree
+        - Oct Tree
+     - Terminology
+        - Root - Node which does not have parent
+        - Edge - Link between two nodes
+        - Leaf - Node which does not have any children
+        - Sibling - Children Node of same Parent
+        - Ancestor - Parent and grandparent of a node
+        - Depth of Node - length of path from root to node
+        - Height of Node - length of the path from the node to the deepest node
+        - depth of Tree - Depth of root Node = 0
+        - Height of tree - height of root node

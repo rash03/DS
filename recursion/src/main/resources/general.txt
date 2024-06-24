@@ -1,0 +1,40 @@
+User Recusion for problems like
+    - Compute the nth ...
+    - list the nth ...
+    - compute all ..
+Recursion is used in Data-Structure like
+    - Trees
+    - Graphs
+Recursion is used in algorithm like
+    - Divide and Conquer
+    - Greedy Algorithm
+    - Dynamic Programming
+logic of Recursion
+    - A method that calls itself
+    - Exit Condition from infinite loop
+Recursion vs Iteration
+    - In Recursion the condition decides the end of loop
+        - in efficient in space => can result in out of memory error for infinite loops ( in correct condition)
+    - In Iteration, the counter value decides the end of loop.
+
+Points                  Recursion       Iteration
+
+Space Efficient             No              Yes     No stack memory required in case of iteration
+Time Efficient              No              Yes     Recursion needs more time to push and pop elements from stack
+easy to implement           Yes             No      Use recursion only when a problem can be broken into sub-problems
+
+Recursion
+    - use
+        - when a problem can be broken in small sub problems
+        - where extra overhead of time and space is not an issue.
+            - a mobile application on a divide with less RAM is not the case where
+            recursion should be used.
+            - not ideal for time critical applications (like car-airbag)
+        - when quick solution is needed in place of efficient one
+        - for tree traversal.
+        - when we use memoization in recursion (time complexity can be reduced)
+    - avoid
+        - if subproblems cannot be created
+        - if time and space complexity matters
+        - Recursion is slow
+

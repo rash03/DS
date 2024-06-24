@@ -1,5 +1,6 @@
 .DS_Store
 DS.iml
+.idea
 ### IntelliJ IDEA ###
 stack/.gradle
 stack/build

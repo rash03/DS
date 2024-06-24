@@ -4,7 +4,14 @@ Queue
         - call centre calls
         - Point of sale in a restaurant (preparing and delivering order)
     - implementation
+        - Array and LinkList Time Complexity = O(1)
         - Array
             - Linear Queue
             - Circular Queue
-        - Linklist
+        - LinkList
+            Space Efficient
+    - use
+        - FIFO functionality
+        - Chance of data corruption is minimum
+    - Avoid
+        - Random access is not possible= > update of an element in between is not possible.
