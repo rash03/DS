@@ -1,0 +1,32 @@
+**Binary Heap**
+  - It is a Binary Tree with some additional properties
+  - A node can have only 2 Node
+  - A binary Heap is either MIN Heap or MAX Heap
+    - Min Binary Heap - The root must be the minimum among all keys present in Binary Heap.
+    - Max Binary Heap - The root must be the maximum among all keys present in Binary Heap.
+  - It is a complete Tree 
+    - All level are completely filled except possibly the last level.
+    - Last level has all keys as left as possible
+      - This property makes them suitable to be stored in an array.
+  - Why we need binary Tree
+    - When we want minimum or maximum number among a set of numbers in O(LogN) time. Also we want that insertion of 
+    numbers does not take more than O(logN) time.
+      - Possible Solutions
+        - Store Numbers in sorted array => search-minimum is O(1) but insertion is O(N) - X
+        - Store number in LinkList => insertion is O(N) - X
+        - Store number in Binary Heap => Guarantees both insertion and find minimum takes O(logN) time - √√
+  - Practicals Cases for Binary Heap
+    - Prim's Algorithm
+    - Heap Sort
+    - Priority Queue
+  - Operationsß
+    - Creation
+    - Peek Top
+    - Extract Min/ Max
+    - Traversal
+    - Get size
+    - Insert value
+    - Delete Entire Binary Heap
+  - Implementation
+    - Array
+    - Reference / pointer implementation

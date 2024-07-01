@@ -1,4 +1,4 @@
-package ds.example;
+package ds.example.bst;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -24,7 +24,6 @@ public class BST {
             node.right = insert(node.right,value);
             return node;
         }
-
     }
 
     public void insert(int value){

@@ -1,4 +1,4 @@
-package ds.example;
+package ds.example.binaryTree;
 
 public class BinaryTreeMain {
     public static void main(String[] args) {

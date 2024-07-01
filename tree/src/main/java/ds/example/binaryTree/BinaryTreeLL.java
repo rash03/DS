@@ -1,4 +1,4 @@
-package ds.example;
+package ds.example.binaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;

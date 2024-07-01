@@ -1,4 +1,4 @@
-package ds.example;
+package ds.example.bst;
 
 public class BSTNode {
 
