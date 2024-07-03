@@ -1,0 +1,22 @@
+**TRIE**
+
+  - organizes information in hierarchy
+  - Used to store search String
+  - A node can contain multiple non-repetitive characters
+  - Every node stores link to next character in string
+  - every node keeps track of 'end of string'
+  - UseCase
+    - Spell Checker
+    - Auto Completion
+  - Common Opearation
+    - Creation
+    - Insertion
+      - Case1: A Trie is blank
+      - Case2: New String's prefix is common to another string prefix
+      - Case3: New String's prefix is already present as a complete string
+      - Case4: String to be inserted is already present in the Trie
+    - Search For a String
+      - Case1: String does not exist in Trie
+      - Case2: String exist in the Trie.
+      - Case3: String is a prefix of another string but does not exist in Trie.
+    - Deletion from a Trie
