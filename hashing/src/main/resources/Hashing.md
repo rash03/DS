@@ -1,0 +1,25 @@
+**Hashing**
+
+  - Hash Functions
+    - Mod - input is number
+      - mod(400,24) => 16
+    - ASCII - input is string
+      - modASCII("ABC",24) => (65+66+67) mod 24 => 6
+  - Properties of Hash Functions
+    - Distributes the hash values uniformly across hash tables
+    - It has to use all input data
+  - Collision Resolution Technique
+    - Direct Chaining
+      - It has an array of references. it stores the reference of a link-list
+      - 
+    - Open Addressing : Colliding elements are stored in other vacant buckets. These buckets are found by 'probing'
+      - Liner Probing
+        - It places the key into closest following empty cell.
+      - Quadratic probing
+      - Double hashing
+  - Hash Table is Full
+    - Direct Chaining
+      - hashtable is never full as we keep on adding node.
+    - Open Addressing
+      -  Create 2X size of current hashTable and recall hashing for current keys
+      - based on load factor, if it is greater than 0.75 then a new hashtable is created and items are moved to it.

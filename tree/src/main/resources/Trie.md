@@ -20,3 +20,10 @@
       - Case2: String exist in the Trie.
       - Case3: String is a prefix of another string but does not exist in Trie.
     - Deletion from a Trie
+      - Case1: Some other prefix of string is same as ont that we want to delete - delete API when Trie contains APPLE and API
+      - Case2: The String is a prefix of another string - - delete API when Trie contains APIS and API
+      - Case3: Other string is a prefix of this string - delete APIS when Trie contains APIS and API
+      - Case4: not any string depends on the string - delete K when Trie contains K and API
+  - Practical Case
+    - Context Sensitive help
+    - String Search
