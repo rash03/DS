@@ -1,0 +1,11 @@
+- BFS
+- Two heaps
+- Two Pointers
+- Sliding Windows
+- DFS
+- Topological Sort
+- Merge intervals
+- Backtracking
+- Trie
+- Flood Fill
+- Segment Tree
