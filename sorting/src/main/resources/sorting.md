@@ -59,8 +59,31 @@
       - Time Complexity
           - O(N^2)
     - Bucket Sort
+      - Create buckets and distribute elements of array into bucket.
+      Sort buckets individually
+      Merge buckets after sorting
+      - Formula
+        - No of bucket = square root of number of elements and roundOf(result).
+      Distribute elements in the bucket => appropiate bucket = cellvalue*numberOfbucket/maxValue & ceil(result)
+      - Use
+        - When input is uniformly distributed over a range,. For example 1,2,4,5,3,8,7,9 is Okay but 1,2,4,91,93,95 is NOT OKAY
+        Difference between two numbers should not be large.
+        - Avoid when space is a concern 
     - Merge Sort
+      - Divide and Conquer algorithm
+      Divide the input into two halves and keep dividing them recursively until they become too small to be broken further
+      Then merge the halves by sorting them.
+      - Use
+        - When stable sort is needed
+        - When expected time is O(NLogN)
+        - Avoid when space is concern
     - Quick Sort
+      - Divide and Conquer
+      Find pivot number and make sure smaller numbers located at the left of pivot and bigger numbner on right of pivot\
+      - unlike Merge sort, extra space is not required
+      - Use
+        - When average expected time is O(NlogN)
+        - Avoid when space is concern and 'stable' sort is needed
     - Heap Sort
 - Which one to select
     - Stability
