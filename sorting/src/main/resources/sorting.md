@@ -34,13 +34,30 @@
             - 1,3,5,7,7,9,11 => when set of elements contain duplicate elements.
 - Sorting Algorithm
     - Bubble Sort
-        - Use
-            - When input is almost sorted
-            - Space is concern
-        - Time Complexity
-            - O(N^2)
+      - compare two cells and swap them based on who is greater. 
+      Repeat outer loop 0 = i< n-1 and inner loop 0 = i < n-i-1 times
+      - Use
+        - When input is almost sorted
+        - Space is concern
+      - Time Complexity
+        - O(N^2)
     - Selection Sort
+      - Divide the array in two parts
+      Repeatedly find minimum element in array and swap it with first element of unsorted array.
+      Thus unsorted array will always be 1 element less in each iteration.
+      - Use
+        - When we have insufficient memory
+      - Time Complexity
+        - O(N^2)
     - Insertion Sort
+      - Divide the array in two parts. 
+      find the first element from unsorted array and find its correct position in sorted array.
+      Repeat until unsorted array is empty
+      - Use
+        - When we have insufficient memory
+        - When we have continuous inflow of elements and we want to keep them sorted
+      - Time Complexity
+          - O(N^2)
     - Bucket Sort
     - Merge Sort
     - Quick Sort
