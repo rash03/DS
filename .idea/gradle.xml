@@ -36,6 +36,15 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/design-pattern-microservice" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../../Programs/gradle-7.3.3" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/design-pattern-microservice" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/doublyLinkList" />
         <option name="modules">
           <set>

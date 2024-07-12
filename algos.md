@@ -10,13 +10,13 @@
 - Flood Fill
 - Segment Tree
 
-As you know my name is Rajat Shukla. I have total 18.5 years of experience. Ive been in Netcracker for around 9 years now. Before that i was in Tibco for 6 years and befor that i was in Nihilent, which is a service based company, for 3 years.
-My designation in Netcracker is Senior System Architect. My roles and responsibilities include working in the capacity of an Application Architect, Security Architect, and Individual Contributor.
-I am responsible for 7 products in billing domain. I design and Implement functonial, Non functional and security related features. As an individual contributor im also involved in doing POCs driven by Customer enhancments/ architecutral and technology changes. I also act as a Security SME, where i participate in customer meetings, understand their products and security requirements and consult them how integration can happen. The main work in security revolve around user authN and AuthZ and service to service authn and AuthZ.
+As you know my name is RS. I have total 18.5 years of experience. Ive been in AA for around x years now. Before that i was in BB for y years and befor that i was in CC, which is a service based company, for c years.
+My designation in AA is Senior System Architect. My roles and responsibilities include working in the capacity of an Application Architect, Security Architect, and Individual Contributor.
+I am responsible for d products in billing domain. I design and Implement functional, Non-functional and security related features. As an individual contributor im also involved in doing POCs driven by Customer enhancments/ architecutral and technology changes. I also act as a Security SME, where i participate in customer meetings, understand their products and security requirements and consult them how integration can happen. The main work in security revolve around user authN and AuthZ and service to service authn and AuthZ.
 
 Im looking for Career growth and i also want to explore other Domains.
 
-I have been with my current company for 9 years,I have worked hard to align my career goals with the company's objectives.
+I have been with my current company for a years,I have worked hard to align my career goals with the company's objectives.
 Now i also want to explore other options which can help in my long term aspirations and also expose me to new domains
 
 I aim to function as an architect who can integrate various products from different domains to deliver a seamless experience to customers. This involves
@@ -31,7 +31,11 @@ NFRs
 4. Release  Note service
 5. Support 10K request per sec for our AGS proxy
 6. Docker image requirements
-7. CI for cloud and non-cloud builds using Jenkins & sitlab-ci
+7. CI for cloud and non-cloud builds using Jenkins & gitlab-ci
 8. Security NFR like http headers, token content and user-info management
-9. k8 NFR like pod affinity /anti affinity labels for k8 entites
+9. k8 NFR like pod affinity /anti affinity labels for k8 entities
 10. SVT for each product
+
+challenging architecture design
+    - AGS
+    - Soap Module

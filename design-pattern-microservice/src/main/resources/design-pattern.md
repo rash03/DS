@@ -1,0 +1,31 @@
+**Pattern for Microservice**
+- APi Gateway Pattern
+  - Acts as a reverse proxy to route requests from clients to the appropriate microservices.
+- Aggregator Pattern
+  - Used to aggregate responses from multiple microservices into a single response
+- Proxy Pattern
+  - Similar to the API Gateway, but usually implemented as a lightweight proxy.
+- Database per service Pattern
+  - Each microservice has its own database to ensure loose coupling and autonomy.
+- Event Sourcing Pattern
+  - Instead of storing the current state of the data, all changes to the application state are stored as a sequence of events
+- Command Query Responsibility Segregation (CQRS) Pattern
+  - Separates the read and write operations on a data model into two distinct models.
+- Circuit Breaker Pattern
+  - Prevents a network or service failure from cascading to other services.
+- Saga Pattern
+  - Manages distributed transactions across multiple microservices, ensuring consistency and rollback capabilities.
+- Service Discovery Pattern
+  - Allows services to discover each other dynamically at runtime, often using a registry.
+- Strangler Pattern
+  - Gradually replaces parts of a legacy system with new microservices
+- Bulkhead Pattern
+  - Isolates different parts of the system to prevent a failure in one service from affecting others.
+- Sidecar Pattern
+  - Deploys auxiliary components or services alongside the main service to manage cross-cutting concerns like logging, monitoring, and security
+- Health Check Pattern
+  - Regularly checks the health and status of microservices to ensure they are functioning correctly.
+- Retry Pattern
+  - Automatically retries failed requests to handle transient failures
+- Distributed Tracing Pattern
+  - Tracks requests as they flow through the system to debug and monitor performance
