@@ -9,6 +9,7 @@
 - Trie
 - Flood Fill
 - Segment Tree
+- Token bucket Algorithm
 
 As you know my name is RS. I have total 18.5 years of experience. Ive been in AA for around x years now. Before that i was in BB for y years and befor that i was in CC, which is a service based company, for c years.
 My designation in AA is Senior System Architect. My roles and responsibilities include working in the capacity of an Application Architect, Security Architect, and Individual Contributor.

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DS.iml" filepath="$PROJECT_DIR$/DS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design-pattern-microservice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/design-pattern-microservice.main.iml" />
     </modules>
   </component>
 </project>
