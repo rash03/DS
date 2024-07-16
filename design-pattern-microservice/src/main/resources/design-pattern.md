@@ -39,8 +39,6 @@
     - Issues :
       - Only Eventual Consistency can be guarantee. This pattern shuold not be used for Strict Consistency.
       - Adds overheads and complexity
-- Circuit Breaker Pattern
-  - Prevents a network or service failure from cascading to other services.
 - Saga Pattern
   - Manages distributed transactions across multiple microservices, ensuring consistency and rollback capabilities.
   - https://www.baeldung.com/cs/saga-pattern-microservices
@@ -58,13 +56,15 @@
       tradeoff between extra space with cost.. The materialized view can be stores in same DB (then we dont manage updates to the new view) 
     or we can use some in memory cache or readonly DB that get created with data from source. 
     Progamaticalyl we can keep the view in readonly cache uptodate
-  - 
-- Service Discovery Pattern
-  - Allows services to discover each other dynamically at runtime, often using a registry.
-- Strangler Pattern
-  - Gradually replaces parts of a legacy system with new microservices
-- Bulkhead Pattern
-  - Isolates different parts of the system to prevent a failure in one service from affecting others.
+- Dead Letter Queue
+  - DLQ allow to handle message delivery failure in an Event Driven Architecture
+  - Two ways to publish messaage to DLQ
+    - Programatic way
+    -  Automated (by the  message Broker)
+  - Ways to proces the DLQ msg 
+    - Fix and republish
+    - Manual (case by case)
+
 - Sidecar Pattern & Ambassador Pattern
   - Deploys auxiliary components or services alongside the main service to manage cross-cutting concerns like logging, monitoring, and security
   - Side Car Pattern
@@ -99,6 +99,32 @@
       - Adding Jitter or randomization between retries
       - How many times / how long to retry.
       - Is operation Idempotent
+- Circuit Breaker Pattern
+  - Prevents a network or service failure from cascading to other services.
+  - it is very powerfull for handling long-lasting errors
+  - DIFFERENCE
+    - Retry pattern
+      - Optimistic approach => First rquest failed but next will be successfull
+    - Circuit Breaker
+      - Pessimistic approach => first failed so next will also fail
+    - when the error threshold exceeds it goes to  open state.
+  - It is usedull for errors for which
+    - There is no point in retrying or is  very costly
+  - There are 3 states of the circut breaker - closed, open (where no request are allowed to passed), half-open
+    - once it goes to open state then after some time it allows some request to pass through. If the succesrate of request
+      in half-open status is high the it reverts back to closed state
+  - Considerations
+    - what to do with outgoing request in an Open state
+      - Drop it (with proper logging)
+      - We can also Log and replay => when the issues are resolved and it is in closed state again then we can replay the
+        missed steps
+    - SWhat response do we send to the caller
+      - Fail silently => send empty response (or some predefined response)
+    - have separate circuit breaker for each external service
+    - Replacing half-open with Async Health Checks
+      - If the success rate of health check is high then we can change the status to closed state
+    - Where to implement circut breaker pattern
+      - Ambassador Pattern or in a library
 - Distributed Tracing Pattern
   - Tracks requests as they flow through the system to debug and monitor performance
 - Anti-Corruption Adapter/Layer Pattern
@@ -134,6 +160,48 @@
       - how to implemet
         - Customer based or global (APi level) throttling
         - External throttling vs service based throttling
-  - 
+- Service Discovery Pattern
+  - Allows services to discover each other dynamically at runtime, often using a registry.
+- Strangler Pattern
+  - Gradually replaces parts of a legacy system with new microservices
+- Bulkhead Pattern
+  - Isolates different parts of the system to prevent a failure in one service from affecting others.
 - DBAAS
 - Pipes and Filter pattern
+- Rolling deployment Pattern
+  - No Downtime
+  - No additional cost for hardawre
+  - we can rollback quickly and transparently
+  - a load balancer stops sending traffic to existing servers one at a time. nce that instance stops a new instance is 
+  created on its place. Slowly all instances are replaced and when all are up then they are added to LB. In case of errors
+  the deployment is rollbacked in reverse steps.
+  - Downside
+    - Potential Cascading failures
+    - 2 version of same application at the same time. They might be incompatible so it might cause unexpected behaviour
+- Blue-Green Deployment Pattern
+  - We keep both old and new version of deployment. LB keeps on sending request toold one. After new release is installed
+  and we run some test on it, LB shifts the traffic to new release. Old is called Blue and New is called Green.
+  - Advantage
+    - Numberof old and new instances are same, so in case of error we can switch back quickly
+    - we can use only one version of our application at any time.
+  - Downside
+    - we need twice as many servers. 
+- Canary Release
+  - mix of rolling and blue-green deployment
+  - Replace a set of old of servers with new release (also called canary servers)
+  - sending Traffic to canary servers, or we can have some beta users or testers for those servers. The origin can be 
+  configured in LB and beta users traffic can be redirected to the canary servers.
+  - This allows to compare old and new versions in real time.
+  - benefit
+    - Most Safe deployment. The canary servers can run for hours/ days before full release. We can also target a set of 
+    users ony for those servers, so in case of issues it becomes easy to debug and fix the issue before complete deployment
+  - Challenges
+    - Set clear success criteria for automated release and monitotiring.
+- A/B Tesing or A/B deploymetn 
+  - Same as Canary deployment but purpose is different.
+    - We deploy a set of new servers to test a new feature. Once testing is done and reported the deployment is rolled back
+    - Tesing is done on real users.
+    - Example : tesing of new algorithm, of recommendation service, on a set of users to see if its gives any profit.
+    user dont know they are part of new release. After testing is done the servers are rolled back and results are 
+    analysed by experts and final decision is taken.
+- Chaos Engineering
