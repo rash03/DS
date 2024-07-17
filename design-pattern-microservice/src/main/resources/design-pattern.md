@@ -56,15 +56,21 @@
       tradeoff between extra space with cost.. The materialized view can be stores in same DB (then we dont manage updates to the new view) 
     or we can use some in memory cache or readonly DB that get created with data from source. 
     Progamaticalyl we can keep the view in readonly cache uptodate
-- Dead Letter Queue
-  - DLQ allow to handle message delivery failure in an Event Driven Architecture
-  - Two ways to publish messaage to DLQ
-    - Programatic way
-    -  Automated (by the  message Broker)
-  - Ways to proces the DLQ msg 
-    - Fix and republish
-    - Manual (case by case)
 
+- Dead Letter Queue
+    - DLQ allow to handle message delivery failure in an Event Driven Architecture
+    - Two ways to publish messaage to DLQ
+        - Programatic way
+        -  Automated (by the  message Broker)
+    - Ways to proces the DLQ msg
+        - Fix and republish
+        - Manual (case by case)
+- Service Discovery Pattern
+  - Allows services to discover each other dynamically at runtime, often using a registry.
+- Strangler Pattern
+  - Gradually replaces parts of a legacy system with new microservices
+- Bulkhead Pattern
+  - Isolates different parts of the system to prevent a failure in one service from affecting others.
 - Sidecar Pattern & Ambassador Pattern
   - Deploys auxiliary components or services alongside the main service to manage cross-cutting concerns like logging, monitoring, and security
   - Side Car Pattern
@@ -97,34 +103,39 @@
         - Incremental Delay
         - Exponential backoff. 
       - Adding Jitter or randomization between retries
-      - How many times / how long to retry.
-      - Is operation Idempotent
+      - How many times / how long to retry. Note: each pod of a service shuold retry at somerandom value. because if
+      there is a conn issue and retry time is same for all then every one will attmept a connction at the same time
+      This will gain cause overload at the service level.
+      - Is operation Idempotent. [Shuold not creataed a user twice]
+      - Where to add this retry code in application
+        - in a library
+        - Moving the logic in Ambassador side car pattern
 - Circuit Breaker Pattern
-  - Prevents a network or service failure from cascading to other services.
-  - it is very powerfull for handling long-lasting errors
-  - DIFFERENCE
-    - Retry pattern
-      - Optimistic approach => First rquest failed but next will be successfull
-    - Circuit Breaker
-      - Pessimistic approach => first failed so next will also fail
-    - when the error threshold exceeds it goes to  open state.
-  - It is usedull for errors for which
-    - There is no point in retrying or is  very costly
-  - There are 3 states of the circut breaker - closed, open (where no request are allowed to passed), half-open
-    - once it goes to open state then after some time it allows some request to pass through. If the succesrate of request
-      in half-open status is high the it reverts back to closed state
-  - Considerations
-    - what to do with outgoing request in an Open state
-      - Drop it (with proper logging)
-      - We can also Log and replay => when the issues are resolved and it is in closed state again then we can replay the
-        missed steps
-    - SWhat response do we send to the caller
-      - Fail silently => send empty response (or some predefined response)
-    - have separate circuit breaker for each external service
-    - Replacing half-open with Async Health Checks
-      - If the success rate of health check is high then we can change the status to closed state
-    - Where to implement circut breaker pattern
-      - Ambassador Pattern or in a library
+    - Prevents a network or service failure from cascading to other services.
+    - it is very powerfull for handling long-lasting errors
+    - DIFFERENCE
+        - Retry pattern
+            - Optimistic approach => First rquest failed but next will be successfull
+        - Circuit Breaker
+            - Pessimistic approach => first failed so next will also fail
+        - when the error threshold exceeds it goes to  open state.
+    - It is usedull for errors for which
+        - There is no point in retrying or is  very costly
+    - There are 3 states of the circut breaker - closed, open (where no request are allowed to passed), half-open
+        - once it goes to open state then after some time it allows some request to pass through. If the succesrate of request
+          in half-open status is high the it reverts back to closed state
+    - Considerations
+        - what to do with outgoing request in an Open state
+            - Drop it (with proper logging)
+            - We can also Log and replay => when the issues are resolved and it is in closed state again then we can replay the
+              missed steps
+        - SWhat response do we send to the caller
+            - Fail silently => send empty response (or some predefined response)
+        - have separate circuit breaker for each external service
+        - Replacing half-open with Async Health Checks
+            - If the success rate of health check is high then we can change the status to closed state
+        - Where to implement circut breaker pattern
+            - Ambassador Pattern or in a library
 - Distributed Tracing Pattern
   - Tracks requests as they flow through the system to debug and monitor performance
 - Anti-Corruption Adapter/Layer Pattern
