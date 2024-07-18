@@ -39,4 +39,18 @@ NFRs
 
 challenging architecture design
     - AGS
-    - Soap Module
+    - Soap Module\
+
+i implemented Soap Module backend independently. Challenge 1 was to reimplement it using latest tech / frameworks keeping old functionality as is
+No document can cover all functionality and no one knows for sure that customers are using which features in what way. So the pressure was to PORT the code in new implementation
+But it was not possible.
+
+2. dsigned and implemented applicatiaon security across 2 boundary services and 5 web apps for Billing domain. laid down the guidelines and processed on how authN and AuthZ needs to be done.OAuth2 auth code flow using BE service was reuired.
+3. Performance issue was addressed across 5 web apps. the SLA which customer wanted was max 3 sec for a page to load.
+   After analysis the bottle neck was identified as catalog and reference data, They has more get calls as compared to put or post.
+   using microservice pattern , I Extracted catalog and reference data in a separate no sqlDB and with an eventual consistency of 1 min.
+4. Implemented a kafka streams application. The requirement was to convert sync calls to asyunc calls. Challenge came with the sequencing of calls. There is no corelation id and child record can come before parent record.
+4. In moniotoring and infra services like nexus, jenkins, Grafana, graylog etc there is requirement for OIDC integration with customer IDP. Since these are opensoured product, and plugins for OIDC are paid i designed and implemented custom plugin using which how OIDC integration can happen. This impacts all customer deployment
+3. Transaction limit was a special authZ req in few web apps
+7. Created Release Note application indepently
+8. I 
